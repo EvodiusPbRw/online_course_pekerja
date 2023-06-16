@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import '../parts/LoginPartView.dart';
 
 class AppView extends StatelessWidget {
+
+  //Ini constructor
   const AppView({super.key});
 
-  // This widget is the root of your application.
+  //Ini function override dari inherit StatelessWidget
   @override
   Widget build(BuildContext context) {
+    //Material App buat definisiin default font family, font size
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Poppins',
@@ -26,7 +29,8 @@ class AppView extends StatelessWidget {
           caption: TextStyle(fontSize: 12.0),
         ),
       ),
-      home: const LoginView(),
+      //Langsung masuk ke halaman login ini
+      home: const LoginView(), //<-- Ini
     );
   }
 }

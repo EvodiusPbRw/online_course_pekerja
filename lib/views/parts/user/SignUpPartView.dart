@@ -148,6 +148,7 @@ class _SignUpViewState extends State<SignUpView>{
                                           ),
                                           style: TextStyle(color: Colors.black, fontSize: Theme.of(context).textTheme.headline5?.fontSize),
                                           onChanged: (value){
+                                            //Ini password ori
                                             setState(() {
                                               password = value;
                                             });
@@ -180,6 +181,7 @@ class _SignUpViewState extends State<SignUpView>{
                                           ),
                                           style: TextStyle(color: Colors.black, fontSize: Theme.of(context).textTheme.headline5?.fontSize),
                                           onChanged: (value){
+                                            //ini password konfirmasi
                                             setState(() {
                                               confirmPassword = value;
                                             });
@@ -189,6 +191,8 @@ class _SignUpViewState extends State<SignUpView>{
                                       const SizedBox(height: 35),
                                       GestureDetector(
                                         onTap: () async {
+                                          //Ini PENTING!!
+                                          //Buat pengecekan
                                           if((email.isNotEmpty && password.isNotEmpty) && password == confirmPassword) {
                                             DialogMenuElement.openDialog(context, "Registrasi Berhasil", "Tekan tombol Lanjutkan untuk kembali ke halaman Login", const LoginView());
                                           } else if(email.isNotEmpty && password.isNotEmpty && confirmPassword.isNotEmpty && namaLengkap.isNotEmpty){

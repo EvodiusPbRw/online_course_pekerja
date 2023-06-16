@@ -17,9 +17,12 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+  // Gak make database jadinya variable constant
+  // Variable map itu punya key dan value
   Map<String, AccountModel> account =
     {"user@user.id": AccountModel("user@user.id", "user123", "user", "Victor"), "admin@admin.id" : AccountModel("admin@admin.id", "admin123", "admin", "Admin")};
 
+  //Ini variable yang nanti nyimpen data textfield
   String email = "", password = "";
 
   @override
@@ -105,6 +108,7 @@ class _LoginViewState extends State<LoginView> {
                                         ),
                                         style: TextStyle(color: Colors.black, fontSize: Theme.of(context).textTheme.headline4?.fontSize),
                                         onChanged: (value){
+                                          //otomatis manggil setstate ketika value berubah
                                           setState(() {
                                             email = value;
                                           });
